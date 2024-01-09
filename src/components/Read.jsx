@@ -79,25 +79,32 @@ const Read = () => {
                   <td>{tableData.e_age}</td>
                   <td>{tableData.e_mail}</td>
                   <td>{tableData.e_number}</td>
-                  <td> 
-                  <Link to='/update'>
-
-                  <button className="btn btn-primary"
-                  onClick={()=> setDataStorage(tableData.id, tableData.e_name, tableData.e_age, tableData.e_mail, tableData.e_number)}
-                  >Edit  </button>
-                
-                  </Link>
+                  <td>
+                    <Link to="/update">
+                      <button
+                        className="btn btn-primary"
+                        onClick={() =>
+                          setDataStorage(
+                            tableData.id,
+                            tableData.e_name,
+                            tableData.e_age,
+                            tableData.e_mail,
+                            tableData.e_number
+                          )
+                        }
+                      >
+                        Edit
+                      </button>
+                    </Link>
                   </td>
-                  <td> <button className="btn btn-danger"
-                   onClick={() => 
-                   {
-                    if (window.confirm('are you sure delete this data?')){
-                    handleDelete(tableData.id)}
-
-                    }
-                   }
-                   
-                   >Delete</button></td>
+                  <td>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleDelete(tableData.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               );
             })}
